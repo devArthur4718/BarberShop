@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/slide" />
+    <item android:drawable="@drawable/slide1" />
+    <item android:drawable="@drawable/slide3" />
+
+</transition>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.barbershop.ui.schedules.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_barberLocations"
+            app:destination="@id/barberLocations"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.barbershop.ui.schedules.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_login"
+            app:destination="@id/login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.example.barbershop.ui.schedules.usage.UsageHistoryFragment"
+        android:label="@string/title_user_history"
+        tools:layout="@layout/fragment_usage_history" />
+    <fragment
+        android:id="@+id/navFragment"
+        android:name="com.example.barbershop.ui.schedules.feed.FeedFragment"
+        android:label="feed_fragment"
+        tools:layout="@layout/feed_fragment" />
+    <fragment
+        android:id="@+id/barberLocations"
+        android:name="com.example.barbershop.ui.schedules.barber.BarberLocations"
+        android:label="fragment_barber_locations"
+        tools:layout="@layout/fragment_barber_locations" />
+    <fragment
+        android:id="@+id/feed"
+        android:name="com.example.barbershop.ui.schedules.feed.Feed"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.barbershop.ui.login.Login"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" />
+    <fragment
+        android:id="@+id/barberDetail"
+        android:name="com.example.barbershop.ui.schedules.barberdetail.BarberDetail"
+        android:label="barber_detail_fragment"
+        tools:layout="@layout/barber_detail_fragment" />
+</navigation>

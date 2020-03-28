@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="barber"
+            type="com.example.barbershop.data.items.Barber" />
+
+
+        <variable
+            name="clicklistener"
+            type="com.example.barbershop.data.adapter.BarbersFeedAdapter.BarberFeedListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerSmallBarber"
+        style="@style/rippleEffect"
+        android:onClick="@{() -> clicklistener.onClick(barber)}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivSmallBarber"
+            android:layout_width="71dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/img_avatar1"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSmallBarberName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/dummy_name"
+            app:layout_constraintEnd_toEndOf="@+id/ivSmallBarber"
+            app:layout_constraintStart_toStartOf="@+id/ivSmallBarber"
+            app:layout_constraintTop_toBottomOf="@+id/ivSmallBarber" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

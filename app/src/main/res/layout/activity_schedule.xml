@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.schedules.confirm.ConfirmSchedule">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_green_light"
+            android:fontFamily="@font/roboto_black"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:text="@string/schedule_confirmed"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_big"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/img_avatar1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/professional"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_image"
+            app:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+        <TextView
+            android:id="@+id/tvBarberScheduledName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/dummy_name"
+            android:textSize="@dimen/text_size_big"
+            app:layout_constraintEnd_toEndOf="@+id/textView16"
+            app:layout_constraintStart_toStartOf="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <TextView
+            android:id="@+id/tvUnit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:text="Unidade : Seu antonio"
+            app:layout_constraintEnd_toEndOf="@+id/tvBarberScheduledName"
+            app:layout_constraintStart_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="@dimen/icon"
+            android:layout_height="@dimen/icon"
+            app:layout_constraintBottom_toBottomOf="@+id/tvUnit"
+            app:layout_constraintStart_toStartOf="@+id/profile_image"
+            app:srcCompat="@drawable/ic_sydney_opera_house" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="@dimen/icon"
+            android:layout_height="@dimen/icon"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9"
+            app:srcCompat="@drawable/ic_add_to_cart" />
+
+        <TextView
+            android:id="@+id/tvService"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Serviços: Cabelo"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+            app:layout_constraintEnd_toEndOf="@+id/tvUnit"
+            app:layout_constraintStart_toStartOf="@+id/tvUnit"
+            app:layout_constraintTop_toTopOf="@+id/imageView12" />
+
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="@dimen/icon"
+            android:layout_height="@dimen/icon"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_calendario"
+            app:layout_constraintStart_toStartOf="@+id/imageView12"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="@dimen/icon"
+            android:layout_height="@dimen/icon"
+
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_clock"
+            app:layout_constraintStart_toStartOf="@+id/imageView13"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+        <TextView
+            android:id="@+id/tvConfirmedDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Data : 18/03/2020 - Quarta"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+            app:layout_constraintEnd_toEndOf="@+id/tvService"
+            app:layout_constraintStart_toStartOf="@+id/tvService"
+            app:layout_constraintTop_toTopOf="@+id/imageView13" />
+
+        <TextView
+            android:id="@+id/tvConfirmedHour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Horário: 13:00"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+            app:layout_constraintEnd_toEndOf="@+id/tvConfirmedDate"
+            app:layout_constraintStart_toStartOf="@+id/tvConfirmedDate"
+            app:layout_constraintTop_toTopOf="@+id/imageView14" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGetAllScheduledServices"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/my_schedules"
+            style="@style/black_button_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvConfirmedHour"
+            app:layout_constraintStart_toStartOf="@+id/imageView14" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

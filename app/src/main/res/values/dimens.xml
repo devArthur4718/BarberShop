@@ -1,0 +1,18 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="bottom_sheet_default_peek_height">0dp</dimen>
+    <dimen name="medium">16sp</dimen>
+    <dimen name="circleDimen">96dp</dimen>
+    <dimen name="icon_dimen">24dp</dimen>
+    <dimen name="card_height">55dp</dimen>
+    <dimen name="text_size_big">18sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="cardRadius">8dp</dimen>
+    <dimen name="cardElevation">8dp</dimen>
+    <dimen name="barberDetail">408dp</dimen>
+    <dimen name="diemn_small">67dp</dimen>
+    <dimen name="badge">30dp</dimen>
+    <dimen name="commentCardWidth">249dp</dimen>
+    <dimen name="commentCardHeight">156dp</dimen>
+    <dimen name="icon">24dp</dimen>
+</resources>

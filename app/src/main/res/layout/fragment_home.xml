@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.barbershop.ui.schedules.home.HomeViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/shadowbackground"
+        tools:context=".ui.schedules.home.HomeFragment">
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:background="#494646"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/topSlide"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.50"
+            android:contentDescription="@string/app_slide_images"
+            android:scaleType="centerCrop"
+            android:background="@drawable/home_slides"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <include layout="@layout/title_stile_1" />
+
+        <TextView
+            android:id="@+id/tvSubline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/home_subtitle"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/medium"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/logo"
+            app:layout_constraintStart_toStartOf="@+id/logo"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:layout_constraintVertical_bias="0.13999999" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHome"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="@dimen/cardRadius"
+            app:cardElevation="@dimen/cardElevation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubline" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tvBarberUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:hint="@string/unit" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputService"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvBarberUnit"
+                    app:layout_constraintStart_toStartOf="@+id/tvBarberUnit"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBarberUnit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/service" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputBarder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/inputService"
+                    app:layout_constraintStart_toStartOf="@+id/inputService"
+                    app:layout_constraintTop_toBottomOf="@+id/inputService">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/barber" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tvInputCalendarDate"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/inputBarder"
+                    app:layout_constraintStart_toStartOf="@+id/inputBarder"
+                    app:layout_constraintTop_toBottomOf="@+id/inputBarder">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/date" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSearchServices"
+                    style="@style/black_button_style"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="@{() -> viewModel.showConfirmScheduleActivity()}"
+                    android:text="@string/schedule_service"
+                    app:backgroundTint="@android:color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/tvInputCalendarDate"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/tvInputCalendarDate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvInputCalendarDate" />
+
+                <View
+                    android:id="@+id/clickAreaUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:onClick="@{() -> viewModel.showBarberLocationActivity()}"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBarberUnit"
+                    app:layout_constraintEnd_toEndOf="@+id/tvBarberUnit"
+                    app:layout_constraintStart_toStartOf="@+id/tvBarberUnit"
+                    app:layout_constraintTop_toTopOf="@+id/tvBarberUnit" />
+
+                <View
+                    android:id="@+id/clickAreaService"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:onClick="@{() -> viewModel.showBottomDialog()}"
+                    app:layout_constraintBottom_toBottomOf="@+id/inputService"
+                    app:layout_constraintEnd_toEndOf="@+id/inputService"
+                    app:layout_constraintStart_toStartOf="@+id/inputService"
+                    app:layout_constraintTop_toTopOf="@+id/inputService" />
+
+
+                <View
+                    android:id="@+id/clickAreaBarber"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:onClick="@{() -> viewModel.showBarberDialog()}"
+                    app:layout_constraintBottom_toBottomOf="@+id/inputBarder"
+                    app:layout_constraintEnd_toEndOf="@+id/inputBarder"
+                    app:layout_constraintStart_toStartOf="@+id/inputBarder"
+                    app:layout_constraintTop_toTopOf="@+id/inputBarder" />
+
+
+                <View
+                    android:id="@+id/clickAreaDate"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:onClick="@{() -> viewModel.showCalendar()}"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvInputCalendarDate"
+                    app:layout_constraintEnd_toEndOf="@+id/tvInputCalendarDate"
+                    app:layout_constraintStart_toStartOf="@+id/tvInputCalendarDate"
+                    app:layout_constraintTop_toTopOf="@+id/tvInputCalendarDate" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
